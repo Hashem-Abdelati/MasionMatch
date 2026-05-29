@@ -1,12 +1,12 @@
 import { Link } from "react-router";
 
 const partnerLogos = [
-  "Atelier No. 6",
-  "The Linen Room",
-  "Muse Collective",
-  "Sable & Stone",
-  "North Edit",
-  "Cedar Market",
+  "Company 1",
+  "Company 2",
+  "Company 3",
+  "Company 4",
+  "Company 5",
+  "Company 6",
 ];
 
 const productMoments = [
@@ -80,57 +80,67 @@ export default function HomeShowcase() {
         </div>
       </section>
 
-      <section className="py-32">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-[0.9fr_1.1fr] gap-20 items-start">
-            <div className="sticky top-28 space-y-8">
-              <div>
-                <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mb-6">
-                  The product
-                </p>
-                <h2 className="text-[40px] md:text-[56px] leading-[1.05] tracking-tight">
-                  A styling layer for the boutique floor.
-                </h2>
-              </div>
-              <p className="text-[17px] leading-relaxed text-foreground/75 max-w-md">
-                MaisonMatch sits between your inventory and your customer conversations. It helps your team recommend the full look without turning your store into a software project.
-              </p>
-              <Link
-                to="/solution"
-                className="inline-flex px-8 py-3 border border-border hover:bg-muted transition-colors text-[13px] tracking-wide"
-              >
-                Explore the Solution
-              </Link>
-            </div>
+<section className="py-16 md:py-32">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20 items-start">
+      <div className="lg:sticky lg:top-28 space-y-6 md:space-y-8">
+        <div>
+          <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mb-5 md:mb-6">
+            The product
+          </p>
 
-            <div className="space-y-5">
-              {productMoments.map((moment, index) => (
-                <article
-                  key={moment.title}
-                  className="grid md:grid-cols-[140px_1fr] gap-8 border border-border bg-background p-8 hover:bg-card transition-colors"
-                >
-                  <div className="space-y-5">
-                    <p className="text-[48px] leading-none tracking-tighter text-accent/40">
-                      {String(index + 1).padStart(2, "0")}
-                    </p>
-                    <p className="text-[11px] tracking-[0.25em] uppercase text-muted-foreground">
-                      {moment.eyebrow}
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-[28px] tracking-tight mb-4">
-                      {moment.title}
-                    </h3>
-                    <p className="text-[15px] leading-relaxed text-foreground/70">
-                      {moment.body}
-                    </p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
+          <h2 className="text-[34px] md:text-[56px] leading-[1.08] md:leading-[1.05] tracking-tight">
+            A styling layer for the boutique floor.
+          </h2>
         </div>
-      </section>
+
+        <p className="text-[15px] md:text-[17px] leading-relaxed text-foreground/75 max-w-md">
+          MaisonMatch sits between your inventory and your customer
+          conversations. It helps your team recommend the full look without
+          turning your store into a software project.
+        </p>
+
+        <Link
+          to="/solution"
+          className="inline-flex w-full sm:w-auto justify-center px-8 py-3 border border-border hover:bg-muted transition-colors text-[13px] tracking-wide"
+        >
+          Explore the Solution
+        </Link>
+      </div>
+
+      <div className="space-y-4 md:space-y-5">
+        {productMoments.map((moment, index) => (
+          <article
+            key={moment.title}
+            className="border border-border bg-background p-6 md:p-8 hover:bg-card transition-colors"
+          >
+            <div className="flex items-start justify-between gap-6 mb-8 md:mb-0 md:grid md:grid-cols-[140px_1fr] md:gap-8">
+              <div className="space-y-3 md:space-y-5 shrink-0">
+                <p className="text-[34px] md:text-[48px] leading-none tracking-tighter text-accent/40">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+
+                <p className="text-[10px] md:text-[11px] tracking-[0.22em] md:tracking-[0.25em] uppercase text-muted-foreground max-w-[120px]">
+                  {moment.eyebrow}
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-[24px] md:text-[28px] leading-[1.12] tracking-tight mb-4">
+                  {moment.title}
+                </h3>
+
+                <p className="text-[15px] leading-relaxed text-foreground/70">
+                  {moment.body}
+                </p>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       <section className="py-32 bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto px-6">
@@ -199,7 +209,7 @@ export default function HomeShowcase() {
         </div>
       </section>
 
-      <section className="py-28 bg-muted/40">
+      {/* <section className="py-28 bg-muted/40">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-[1fr_1fr] gap-16 items-center">
             <div>
@@ -250,7 +260,7 @@ export default function HomeShowcase() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

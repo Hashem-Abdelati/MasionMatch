@@ -5,7 +5,6 @@ export default function HowItWorksPage() {
   return (
     <main className="pt-20">
       <HowItWorks />
-      <Demo />
     </main>
   );
 }
